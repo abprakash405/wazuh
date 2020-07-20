@@ -17,6 +17,7 @@ metadata:
 spec:
   selector:
     app: wazuh-kibana
+  type: LoadBalancer
   ports:
     - name: kibana
       port: 5601
