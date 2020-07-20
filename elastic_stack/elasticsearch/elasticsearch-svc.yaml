@@ -17,8 +17,9 @@ metadata:
 spec:
   selector:
     app: wazuh-elasticsearch
+  type: LoadBalancer
   ports:
     - name: es-nodes
       port: 9300
       targetPort: 9300
-  clusterIP: None
+  #clusterIP: None
