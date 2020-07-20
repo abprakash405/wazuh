@@ -17,8 +17,9 @@ metadata:
 spec:
   selector:
     app: wazuh-manager
+  type: LoadBalancer
   ports:
     - name: cluster
       port: 1516
       targetPort: 1516
-  clusterIP: None
+  #clusterIP: None
