@@ -28,13 +28,13 @@ spec:
       initContainers:
         - name: volume-mount-hack
           image: busybox
-          resources:
-            requests:
-              cpu: 50m
-              memory: 128Mi
-            limits:
-              cpu: 100m
-              memory: 256Mi
+#          resources:
+#            requests:
+#              cpu: 50m
+#              memory: 128Mi
+#            limits:
+#              cpu: 100m
+#              memory: 256Mi
           command:
             - sh
             - '-c'
@@ -53,13 +53,13 @@ spec:
       containers:
         - name: wazuh-elasticsearch
           image: 'wazuh/wazuh-elasticsearch:3.13.1_7.8.0'
-          resources:
-            requests:
-              cpu: 500m
-              memory: 1Gi
-            limits:
-              cpu: 1
-              memory: 2Gi
+#          resources:
+#            requests:
+#              cpu: 500m
+#              memory: 1Gi
+#            limits:
+#              cpu: 1
+#              memory: 2Gi
           env:
             - name: ES_JAVA_OPTS
               value: '-Xms1024m -Xmx1024m'
