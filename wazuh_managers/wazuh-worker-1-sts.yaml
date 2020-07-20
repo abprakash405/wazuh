@@ -48,13 +48,13 @@ spec:
       containers:
         - name: wazuh-manager
           image: 'wazuh/wazuh:3.13.1_7.8.0'
-          resources:
-            requests:
-              cpu: 2
-              memory: 1024Mi
-            limits:
-              cpu: 2
-              memory: 2048Mi
+#          resources:
+#            requests:
+#              cpu: 2
+#              memory: 1024Mi
+#            limits:
+#              cpu: 2
+#              memory: 2048Mi
           volumeMounts:
             - name: config
               mountPath: /wazuh-config-mount/etc/ossec.conf
@@ -77,4 +77,4 @@ spec:
         storageClassName: gp2-encrypted-retained
         resources:
           requests:
-            storage: 10Gi
+            storage: 1Gi
