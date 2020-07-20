@@ -7,12 +7,11 @@
 
 # Wazuh StorageClass
 
-apiVersion: storage.k8s.io/v1
+---
 kind: StorageClass
+apiVersion: storage.k8s.io/v1
 metadata:
   name: gp2-encrypted-retained
-provisioner: kubernetes.io/aws-ebs
-parameters:
-  encrypted: 'true'
-  type: gp2
+provisioner: kubernetes.io/azure-disk
+volumeBindingMode: Immediate
 reclaimPolicy: Retain  # Useful in case you delete the PersistentVolumeClaim
