@@ -101,4 +101,4 @@ spec:
         storageClassName: gp2-encrypted-retained
         resources:
           requests:
-            storage: 10Gi
+            storage: 1Gi
