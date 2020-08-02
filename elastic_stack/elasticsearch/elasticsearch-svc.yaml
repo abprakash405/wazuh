@@ -18,6 +18,7 @@ spec:
   selector:
     app: wazuh-elasticsearch
   type: LoadBalancer
+#  type: ClusterIP
   ports:
     - name: es-nodes
       port: 9300

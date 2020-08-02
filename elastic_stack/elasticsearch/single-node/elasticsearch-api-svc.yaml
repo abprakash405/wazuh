@@ -17,6 +17,7 @@ metadata:
 spec:
   selector:
     app: wazuh-elasticsearch
+  type: LoadBalancer
   ports:
     - name: es-rest
       port: 9200
